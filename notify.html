@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AP Scores Found!</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f4f8;
+        color: #222;
+        text-align: center;
+        padding: 30px 20px;
+        margin: 0;
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin-bottom: 8px;
+        color: #004085;
+      }
+      #release-time {
+        font-style: italic;
+        font-size: 1rem;
+        color: #6c757d;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      button {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 12px 28px;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 4px 8px rgb(0 123 255 / 0.3);
+        min-width: 140px;
+      }
+      button:hover {
+        background-color: #0056b3;
+        box-shadow: 0 6px 12px rgb(0 86 179 / 0.5);
+      }
+      #dismissBtn {
+        background-color: #6c757d;
+        box-shadow: 0 4px 8px rgb(108 117 125 / 0.3);
+      }
+      #dismissBtn:hover {
+        background-color: #5a6268;
+        box-shadow: 0 6px 12px rgb(90 98 104 / 0.5);
+      }
+      audio {
+        display: none; /* Hide audio player */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Your AP Scores Are Out!</h1>
+    <p id="release-time"></p>
+    <div class="buttons">
+      <button id="openCBBtn">Open College Board</button>
+      <button id="dismissBtn">Dismiss</button>
+    </div>
+    <audio autoplay>
+      <source src="dun.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="notify.js"></script>
+  </body>
+</html>
